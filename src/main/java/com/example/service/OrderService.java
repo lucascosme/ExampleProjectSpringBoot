@@ -12,12 +12,11 @@ import com.example.repository.OrderRepository;
 public class OrderService {
 	
 	@Autowired OrderRepository orderRepository;
-	
+
 	public void save(){
 		Order order = new Order();
 		order.setInvoice(UUID.randomUUID().toString());
 		order.setNumber(UUID.randomUUID().toString());
 		orderRepository.save(order);
 	}
-
 }
